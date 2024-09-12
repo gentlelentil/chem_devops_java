@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="commonHead">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Molecule Visualiser</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-200">
+
+<!-- Navbar Fragment -->
+<nav class="bg-blue-600 p-4" th:fragment="navbar">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-white text-lg font-semibold">Molecule Visualiser</a>
+        <div>
+            <a href="/logout" class="text-white mx-2 hover:underline">Logout</a>
+            <a href="/login" class="text-white mx-2 hover:underline">Login</a>
+            <a href="/register" class="text-white mx-2 hover:underline">Register</a>
+            <a href="/admetpredictor" class="text-white mx-2 hover:underline">ADMET-Predictor</a>
+            <a href="#" class="text-white mx-2 hover:underline">Contact</a>
+        </div>
+    </div>
+</nav>
+
+
+<div th:fragment="contentPlaceholder">
+    <!-- This will be replaced by child templates -->
+</div>
+
+</body>
+</html>
